@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <style>
+        #date {
+            width: 400px;
+            height: 200px;
+            margin: 300px auto;
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121;color:red ;">
+    <h1 id="date">
+    </h1>
+    <script>
+        const dateContainer = document.getElementById('date');
+        (() => {
+            
+        }
+        );
+
+        setInterval(() => {
+            const date = new Date();
+            const hour = date.getHours();
+            const minut = date.getMinutes();
+            const sec = date.getSeconds();
+            const milisec = date.getMilliseconds();
+            dateContainer.innerText = `${hour}:${minut}:${sec}:${(milisec / 100).toFixed(0)}`;
+        }, 100);
+        // setTimeout(()=>{
+        // const date=new Date();
+        // const hour=date.getHours();
+        // const minut=date.getMinutes();
+        // const sec=date.getSeconds();
+        //     dateContainer.innerText=`${hour}:${minut}:${sec}`;
+        // },5000);
+    </script>
+</body>
+
+</html>
